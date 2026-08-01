@@ -19,9 +19,14 @@ export const metadata: Metadata = {
   description:
     "Next.js 16, Stripe Checkout with a signature-verified idempotent webhook, Supabase with RLS on, Resend delivery. Take a real payment on day one.",
   openGraph: {
-    title: "Keel",
+    title: "Keel — Next.js starter with Stripe, Supabase & Resend wired in",
     description: "The Next.js starter that ships with the money already wired.",
     type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Keel — Next.js starter with Stripe, Supabase & Resend wired in",
+    description: "The Next.js starter that ships with the money already wired.",
   },
 };
 
