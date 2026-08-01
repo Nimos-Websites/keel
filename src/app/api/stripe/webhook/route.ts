@@ -41,9 +41,13 @@ export async function POST(req: Request) {
 
   const session = event.data.object as Stripe.Checkout.Session;
 
-  // paid is the only status that means the money actually moved. `complete`
-  // alone can mean an async payment method is still pending.
-  if (session.payment_status !== 'paid') {
+  // `complete` alone is not enough — an async payment method can still be
+  // pending. `paid` means the money moved; `no_payment_required` is what Stripe
+  // returns for a 100%-off coupon, which is a real entitlement and must deliver.
+  const entitled =
+    session.payment_status === 'paid' ||
+    session.payment_status === 'no_payment_required';
+  if (!entitled) {
     return NextResponse.json({ received: true, ignored: session.payment_status });
   }
 
