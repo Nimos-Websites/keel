@@ -1,25 +1,22 @@
-# Keel Next.js Starter Kit - Organic Traffic & Distribution Strategy
+# Keel SEO Strategy & Execution
 
-## Core Product & Value Proposition
-- **Product**: Keel Next.js Starter Kit ($149)
-- **Includes**: Stripe Checkout, signature-verified idempotent webhook, Supabase with RLS, Resend delivery, one-command deploy.
-- **Target Audience**: Developers, solo founders, and indie hackers who want to take payments this week instead of wiring Stripe and Supabase from scratch.
+This document contains actionable SEO tactics for Keel ($149 Next.js starter kit) to drive targeted developer traffic.
 
-## Distribution & Traffic Strategy (Zero-Cost / Organic)
+## 1. Target Keywords
+- "Next.js starter kit with Stripe"
+- "Next.js SaaS boilerplate Tailwind Supabase"
+- "Next.js boilerplate checkout webhook setup"
+- "production ready Next.js starter kit"
 
-### 1. Developer Community Positioning & Showcases
-- **GitHub Open Source / Public Template Repositories**: Provide a fully functional free CLI tier or public documentation repo that links directly to the paid starter kit for advanced production modules.
-- **Product Hunt & Indie Hackers Launches**: Publish structured build logs, architecture breakdowns (e.g., "How we implemented idempotent Stripe webhooks with Supabase RLS"), and technical teardowns.
-- **Niche Dev Communities (Reddit r/nextjs, r/SaaS, Hacker News "Show HN")**: Share technical case studies detailing the exact architecture of secure webhook handling and zero-downtime database migrations.
+## 2. On-Page SEO Implementation
+- Ensure all pages have high-intent meta titles, descriptions, and OpenGraph images.
+- Add structured data (SoftwareApplication schema) for search engine rich snippets.
+- Fast load times via Vercel Edge optimization.
 
-### 2. High-Intent Content & SEO Architecture
-- Target high-intent developer search queries around boilerplate configuration and payment integration:
-  - `"Next.js Stripe webhook idempotency best practices"`
-  - `"Supabase row level security starter kit Next.js"`
-  - `"Fastest way to accept payments in Next.js App Router"`
-- Publish these guides directly on the Keel blog/docs with prominent calls to action pointing to the $149 starter kit.
+## 3. Developer Content Hub & Free Tools
+- Publish in-depth technical guides targeting pain points (e.g., "How to wire Stripe webhooks idempotently in Next.js App Router").
+- Provide open-source mini-components or configuration snippets that link back to Keel for the complete production kit.
 
-### 3. Execution Roadmap
-1. **Publish Technical Guides**: Write 3 detailed architectural walkthroughs answering common Next.js + Stripe integration hurdles.
-2. **Setup Distribution Hooks**: Ensure every public repository and documentation page includes direct links to `https://keel-kappa-six.vercel.app`.
-3. **Monitor Conversion & Traffic**: Track incoming referrers via Vercel Analytics and Stripe webhook logs.
+## 4. Distribution & Backlinks
+- Share deep-dive technical tutorials on Dev.to, Hashnode, Medium, and Reddit (r/nextjs, r/webdev).
+- Submit to curated Next.js boilerplates and SaaS directories.
