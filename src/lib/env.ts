@@ -29,7 +29,7 @@ export const env = {
     return required('STRIPE_WEBHOOK_SECRET');
   },
   get stripePriceId() {
-    return required('STRIPE_PRICE_ID');
+    return process.env.STRIPE_PRICE_ID || '';
   },
   get supabaseUrl() {
     return required('NEXT_PUBLIC_SUPABASE_URL');
