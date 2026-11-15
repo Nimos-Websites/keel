@@ -15,9 +15,15 @@ export const runtime = 'nodejs';
  */
 export async function GET() {
   try {
+    let priceId = env.stripePriceId;
+    if (!priceId) {
+      const found = await stripe().prices.list({ lookup_keys: ['keel'], active: true, limit: 1 });
+      if (!found.data[0]) throw new Error('No Stripe price with lookup_key "keel"');
+      priceId = found.data[0].id;
+    }
     const session = await stripe().checkout.sessions.create({
       mode: 'payment',
-      line_items: [{ price: env.stripePriceId, quantity: 1 }],
+      line_items: [{ price: priceId, quantity: 1 }],
       success_url: `${env.siteUrl}/thanks?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${env.siteUrl}/?checkout=cancelled`,
       // Required: the delivery email is the entire fulfilment mechanism.
